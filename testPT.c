@@ -19,10 +19,11 @@ static PT_THREAD(input(struct pt *pt)){
 
 static PT_THREAD(calculate(struct pt *pt)){
 	PT_BEGIN(pt);
-	if('+'==op){result=num1+num2;printf("%d\n",result);}
-	if('-'==op){result=num1-num2;printf("%d\n",result);}
-	if('*'==op){result=num1*num2;printf("%d\n",result);}
-	if('/'==op){result=num1/num2;printf("%d\n",result);}
+	printf("The result is ");
+	if( '+' == op){	result=num1+num2;	printf("%d + %d = %d\n",num1,num2,result);	}
+	if( '-' == op){	result=num1-num2;	printf("%d - %d = %d\n",num1,num2,result);	}
+	if( '*' == op){	result=num1*num2;	printf("%d * %d = %d\n",num1,num2,result);	}
+	if( '/' == op){	result=num1/num2;	printf("%d / %d = %d\n",num1,num2,result);	}
 	PT_END(pt);
 }
 
